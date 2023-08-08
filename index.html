@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header-logo"><img src="./img/logo.png" alt="Gaston Reparaciones"></a>
+        <div class="header-nav-space"><nav>
+            <span><a href="#servicios">Servicios</a></span>
+            <span><a href="#consulta">Consulta</a></span>
+        </nav></div>
+    </header>
+    <main>
+        <section id="intro">
+            <h1>Gaston Reparaciones</h1>
+        </section>
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <div class="container">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./img/servicio1.jpeg" alt="servicio1">
+                    </div>
+                    <p>Armado de PC a pedido (con un presupuesto adaptado a lo pedido por el cliente)</p>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./img/servicio2.jpeg" alt="servicio2">
+                    </div>
+                    <p>Compras de componentes directos de importación</p>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./img/servicio3.jpeg" alt="servicio3">
+                    </div>
+                    <p>Reparación y mantenimiento de PC</p>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./img/servicio4.jpeg" alt="servicio4">
+                    </div>
+                    <p>Reparación de electrodomésticos</p>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./img/servicio5.jpeg" alt="servicio5">
+                    </div>
+                    <p>Reparación de celulares y colocación de film protector</p>
+                </div>
+            </div>
+        </section>
+        <section id="consulta">
+            <h2>Consulta</h2>
+            <form action="">
+                <div class="form-text">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="Nombre" id="nombre">
+                </div>
+                <div class="form-text">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="Apellido" id="apellido">
+                </div>
+                <div class="form-text">
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" name="Telefono" id="telefono">
+                </div>
+                <div class="form-text">
+                    <label for="mail">Mail</label>
+                    <input type="mail" name="Mail" id="mail">
+                </div>
+                <p class="form-radio-titulo">Tipo de mensaje</p>
+                <div class="form-radio">
+                    <div class="form-radio-opcion">
+                        <input type="radio" id="consulta" name="TipoConsulta" value="consulta_general">
+                        <label for="consulta">Consulta general</label>
+                    </div>
+                    <div class="form-radio-opcion">
+                        <input type="radio" id="presupuesto" name="TipoConsulta" value="presupuesto">
+                        <label for="presupuesto">Presupuesto</label>
+                    </div>
+                </div>
+                <div class="form-text">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="Mensaje" id="mensaje">Mensaje</textarea>
+                </div>
+                <button type="submit">ENVIAR</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="logo-gaston">
+            <img src="./img/logo.png" alt="Logo de Gaston Reparaciones">
+        </div>
+        <div class="contacto">
+            <p>Email: gastonreparaciones@gmail.com</p>
+            <p>Teléfono: 11 2345-6789</p>
+            <p>Copyright &copy; 2023 </p>
+        </div>
+    </footer>
+</body>
+</html>

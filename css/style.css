@@ -1,0 +1,305 @@
+:root{
+    /* Nombres de los colores personalizados */
+    --rich-black: #060029;
+    --oxford-blue: #03204a;
+    --azure-web: #e0f6ff;
+    --electric-indigo: #4f23ff;
+    --mindaro: #daf97d;
+    --vermilion: #e8442f;
+
+    /* Nombres de propositos de los colores */
+    --color-principal-oscuro: var(--rich-black, #060029);
+    --color-principal-medio: var(--oxford-blue, #03204a);
+    --color-principal-claro: var(--azure-web, #e0f6ff);
+    --color-secundario: var(--electric-indigo, #4f23ff);
+    --color-detalle-claro: var(--mindaro, #daf97d);
+    --color-detalle-oscuro: var(--vermilion, #e8442f);
+
+    /* Regla de 60-30-10: Los principales aparecen el 60% de tiempo, los secundarios el 30%, y los de detalle el 10%. Usar con cuidado. */
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--color-principal-oscuro);
+    color: var(--color-principal-claro);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+
+header{
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 1rem;
+    margin-inline: auto;
+    display: flex;
+    background-color: var(--color-secundario);
+    width: 80%;
+    height: min(10em,100px);
+    border-radius: 2em;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.header-logo{
+    background-color: var(--color-principal-claro);
+    border-radius: 2em 0 0 2em;
+    width: min(100px,50%);
+    display: flex;
+    align-items: center;
+    transition: box-shadow 0.5s cubic-bezier(0.0, 0.0, 0.0, 1.0);
+}
+
+.header-logo:hover{
+    box-shadow: 0px 0px 10px 5px var(--color-secundario);
+    transition: 0.5s cubic-bezier(0.0, 0.0, 0.0, 1.0);
+}
+
+.header-logo:active{
+    /* box-shadow: 0px 0px 10px 5px var(--color-detalle-oscuro); */
+    background-color: var(--color-detalle-oscuro);
+    transition: 0.05s;
+}
+
+.header-logo img{
+    position: relative;
+    left: min(1em,10vw);
+    right: 1em;
+    max-width: min(100%,30vw);
+    max-height: 100%;
+}
+
+.header-nav-space{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    border-radius: 0 2em 2em 0;
+    flex-wrap: nowrap;
+    width: calc(100% - 100px);
+    flex-direction: row;
+    min-width: 50%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+    right: 1em;
+    align-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+    font-size: 1em;
+}
+
+nav a{
+    color: var(--color-detalle-claro);
+    text-decoration: none;
+    padding: 0.5em 0.5em;
+    border-radius: 0.5em;
+}
+
+nav a:hover{
+    background-color: var(--color-detalle-claro);
+    color: var(--color-secundario);
+}
+
+nav a:active{
+    background-color: var(--color-detalle-oscuro);
+}
+
+nav span:not(:last-child)::after{
+    content: " ";
+    width: 1px;
+    background-color: #060029;
+    border-left:#060029 solid 0.5px;
+    margin: 0 0.5em;
+    color: var(--color-principal-medio);
+}
+
+/* Main */
+
+main{
+    min-height: 10em;
+}
+
+h2 {
+    padding-top: 1.5rem;
+    padding-left: 1em;
+    padding-bottom: 0.5rem;
+    margin-bottom: 01rem;
+    font-size: 3rem;
+    font-weight: 100;
+    border-bottom: var(--color-principal-claro) 1px solid;
+}
+
+#intro{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 2rem;
+    width: 100%;
+    background-color: var(--color-principal-medio);
+    background-image: url(../img/fondo-intro.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    min-height: 38rem;
+    color: var(--color-principal-claro);
+    margin-bottom: 2rem;
+}
+
+#intro h1 {
+    background-color: #4f23ff7f;
+    padding: 0 0.5em;
+    border-radius: 10px;
+    margin-top: 4em;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Servicios */
+
+#servicios{
+    min-height: 10em;
+}
+
+#servicios .container {
+    margin: 2em 5%;
+    width: 90%;
+    min-height: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 2em;
+}
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: var(--color-secundario);
+    width: min(100%,25em);
+    font-size: 1.25rem;
+}
+
+.card-img {
+    background-color: var(--color-secundario);
+    max-height: 10em;
+    max-width: 90%;
+}
+
+.card-img img {
+    height: 100%;
+    width: 100%;
+}
+
+.card p {
+    text-align: center;
+    width: 90%;
+    margin: 0.5em 0;
+}
+
+/* Consulta */
+
+#consulta {
+    background-color: var(--color-principal-medio);
+}
+
+form {
+    padding: 0 5% 5% 5%;
+}
+
+.form-text {
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 1em;
+}
+
+.form-text label {
+    font-size: 0.7rem;
+}
+
+.form-radio-titulo {
+    border-bottom: var(--color-principal-claro) 1px solid;
+    margin-bottom: 0.5em;
+}
+
+.form-radio {
+    flex-flow: column wrap;
+    padding-bottom: 0.7em;
+}
+
+.form-radio-opcion {
+    margin: 0.3em 0;
+}
+
+form textarea {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form button {
+    width: 50%;
+    padding: 1em 0;
+    background-color: var(--color-detalle-claro);
+    color: var(--color-principal-medio);
+    border: none;
+    font-weight: bold;
+    font-size: large;
+    margin: 1em 25%;
+    border-radius: 5px;
+}
+
+form button:hover {
+    color: var(--color-detalle-claro);
+    background-color: var(--color-secundario);
+    cursor: pointer;
+}
+
+form button:active {
+    color: var(--color-detalle-claro);
+    background-color: var(--color-detalle-oscuro);
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer{
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--color-principal-oscuro);
+    background-color: var(--color-principal-claro);
+    text-align: center;
+    width: 100%;
+    min-height: 6em;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+footer .contacto {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 6em;
+}
+
+footer .logo-gaston {
+    height: 6em;
+}
+
+footer img {
+    height: 6em;
+}
