@@ -7,14 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="header-logo"><img src="./img/logo.png" alt="Gaston Reparaciones"></a>
+    <header id="head">
+        <a href="index.html" class="header-logo">
+            <img class="isotipo" src="./img/logo-isotipo.png" alt="Logo">
+            <img class="logotipo" src="./img/logo-logotipo.png" alt="Gaston Reparaciones">
+        </a>
         <div class="header-nav-space"><nav>
             <span><a href="#servicios">Servicios</a></span>
             <span><a href="#consulta">Consulta</a></span>
         </nav></div>
     </header>
     <main>
+        <div class="whatsapp">
+            <a href="#">
+                <img src="./img/whatsapp.svg" alt="WhatsApp">
+            </a>
+        </div>
         <section id="intro">
             <h1>Gaston Reparaciones</h1>
         </section>
@@ -61,10 +69,6 @@
                     <input type="text" name="Nombre" id="nombre">
                 </div>
                 <div class="form-text">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" name="Apellido" id="apellido">
-                </div>
-                <div class="form-text">
                     <label for="telefono">Telefono</label>
                     <input type="tel" name="Telefono" id="telefono">
                 </div>
@@ -85,7 +89,7 @@
                 </div>
                 <div class="form-text">
                     <label for="mensaje">Mensaje</label>
-                    <textarea name="Mensaje" id="mensaje">Mensaje</textarea>
+                    <textarea name="Mensaje" id="mensaje"></textarea>
                 </div>
                 <button type="submit">ENVIAR</button>
             </form>
@@ -93,7 +97,9 @@
     </main>
     <footer>
         <div class="logo-gaston">
-            <img src="./img/logo.png" alt="Logo de Gaston Reparaciones">
+            <a href="#head">
+                <img src="./img/logo-imagotipo.png" alt="Logo de Gaston Reparaciones">
+            </a>
         </div>
         <div class="contacto">
             <p>Email: gastonreparaciones@gmail.com</p>
