@@ -9,8 +9,10 @@
 <body>
     <header id="head">
         <a href="index.html" class="header-logo">
-            <img class="isotipo" src="./img/logo-isotipo.png" alt="Logo">
-            <img class="logotipo" src="./img/logo-logotipo.png" alt="Gaston Reparaciones">
+            <div>
+                <img class="isotipo" src="./img/logo-isotipo.png" alt="Logo">
+                <img class="logotipo" src="./img/logo-logotipo.png" alt="Gaston Reparaciones">
+            </div>
         </a>
         <div class="header-nav-space">
             <nav>
@@ -64,6 +66,7 @@
             </div>
         </section>
         <section id="consulta">
+            <div>
             <h2>Consulta</h2>
             <form action="">
                 <div class="form-text">
@@ -81,8 +84,8 @@
                 <p class="form-radio-titulo">Tipo de mensaje</p>
                 <div class="form-radio">
                     <div class="form-radio-opcion">
-                        <input type="radio" id="consulta" name="TipoConsulta" value="consulta_general">
-                        <label for="consulta">Consulta general</label>
+                        <input type="radio" id="tipo-consulta" name="TipoConsulta" value="consulta_general">
+                        <label for="tipo-consulta">Consulta general</label>
                     </div>
                     <div class="form-radio-opcion">
                         <input type="radio" id="presupuesto" name="TipoConsulta" value="presupuesto">
@@ -95,11 +98,15 @@
                 </div>
                 <button type="submit">ENVIAR</button>
             </form>
+            </div>
+            <div class="consulta-side">
+                <img src="./img/consulta.png" alt="Consulta">
+            </div>
         </section>
     </main>
     <footer>
         <div class="logo-gaston">
-            <a href="#head">
+            <a href="index.html">
                 <img src="./img/logo-imagotipo.png" alt="Logo de Gaston Reparaciones">
             </a>
         </div>
