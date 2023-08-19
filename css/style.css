@@ -344,12 +344,54 @@ h2 {
     min-height: 10em;
 }
 
+.preguntas-container {
+    margin: 2em 5%;
+    min-height: 100px;
+}
+
+.pregunta {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.pregunta::before {
+    content: "P:";
+    margin-right: 1em;
+}
+
+.respuesta {
+    margin-bottom: 1em;
+}
+
+.respuesta::before {
+    content: "R:";
+}
+
 /* Mapa */
 
 #mapa {
     display: block;
     overflow: hidden;
     min-height: 10em;
+}
+
+.google-map {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 2em auto;
+    padding: 0 5%;
+    overflow: hidden;
+    width: 600px;
+    height: 450px;
+    max-width: 90%;
+    max-height: 90vh;
+    box-sizing: content-box;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
 }
 
 /* Consulta */
