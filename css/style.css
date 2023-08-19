@@ -331,9 +331,10 @@ h2 {
     background-color: var(--color-principal-medio);
     display: flex;
     flex-flow: row nowrap;
+    overflow: hidden;
 }
 
-#consulta > div {
+.consulta-form {
     flex: 0.5;
 }
 
@@ -343,6 +344,7 @@ h2 {
 
 form {
     padding: 0 5% 5% 5%;
+    max-width: 100%;
 }
 
 input {
@@ -417,8 +419,9 @@ form button:active {
 }
 
 @media (max-width: 600px) {
-    #consulta > div {
+    .consulta-form {
         flex: 1;
+        width: 100%;
     }
     .consulta-side {
         display: none;
