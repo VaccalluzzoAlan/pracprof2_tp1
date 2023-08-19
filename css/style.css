@@ -68,7 +68,6 @@ header{
 }
 
 .header-logo:active{
-    /* box-shadow: 0px 0px 10px 5px var(--color-detalle-claro); */
     background-color: var(--color-detalle-claro);
     transition: 0.05s;
 }
@@ -146,7 +145,7 @@ nav div:not(:last-child)::after{
     color: var(--color-principal-medio);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     header {
         flex-direction: column;
         height: auto;
@@ -191,7 +190,6 @@ nav div:not(:last-child)::after{
         flex-wrap: nowrap;
         flex-direction: row;
         margin-right: 0;
-        /* min-height: 50%; */
     }
 
     nav{
@@ -204,6 +202,11 @@ nav div:not(:last-child)::after{
         gap: 1em;
         padding: 1em;
         align-content: center;
+    }
+
+    nav div {
+        width: 6em;
+        text-align: center;
     }
 
     nav div:not(:last-child)::after{
@@ -227,9 +230,10 @@ h2 {
     padding-top: 1.5rem;
     padding-left: 1em;
     padding-bottom: 0.5rem;
-    margin-bottom: 01rem;
+    margin-bottom: 1rem;
     font-size: 3rem;
     font-weight: 100;
+    /* width: 100%; */
     border-bottom: var(--color-principal-claro) 1px solid;
     overflow: hidden;
     text-overflow: clip;
@@ -242,6 +246,13 @@ h2 {
     height: 8%;
     width: auto;
     z-index: 1;
+    opacity: 50%;
+    transition: 0.5s cubic-bezier(0.0, 0.0, 0.0, 1.0);
+}
+
+.whatsapp:hover {
+    opacity: 100%;
+    transform: scale(150%);
 }
 
 .whatsapp img {
@@ -274,7 +285,6 @@ h2 {
     margin-top: 10vh;
     font-size: 3rem;
     font-weight: 700;
-    width: min-content;
     max-width: 100%;
     text-overflow: clip;
     overflow: hidden;
@@ -325,6 +335,23 @@ h2 {
     margin: 0.5em 0;
 }
 
+/* Preguntas frecuentas */
+
+#preguntas {
+    background-color: var(--color-principal-medio);
+    display: block;
+    overflow: hidden;
+    min-height: 10em;
+}
+
+/* Mapa */
+
+#mapa {
+    display: block;
+    overflow: hidden;
+    min-height: 10em;
+}
+
 /* Consulta */
 
 #consulta {
@@ -336,10 +363,6 @@ h2 {
 
 .consulta-form {
     flex: 0.5;
-}
-
-#consulta h2{
-    padding-left: 0.4em;
 }
 
 form {
