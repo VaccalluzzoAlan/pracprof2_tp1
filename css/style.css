@@ -33,7 +33,7 @@ body{
 /* Header */
 
 header{
-    position: relative;
+    position: sticky;
     left: 0;
     right: 0;
     top: 1rem;
@@ -41,11 +41,20 @@ header{
     display: flex;
     background-color: var(--color-secundario);
     width: 80%;
+    min-height: 2rem;
     height: min(10em,60px);
     border-radius: 20px;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: stretch;
+    z-index: 1;
+    box-shadow: 5px 5px 0.75em 0.25em #000000c0;
+    opacity: 0.5;
+    transition: opacity ease 0.25s;
+}
+
+header:hover{
+    opacity: 1;
 }
 
 .header-logo{
@@ -145,7 +154,7 @@ nav div:not(:last-child)::after{
     color: var(--color-principal-medio);
 }
 
-@media (max-width: 800px) {
+@media (max-width: calc(240px + 32rem)) {
     header {
         flex-direction: column;
         height: auto;
@@ -233,7 +242,6 @@ h2 {
     margin-bottom: 1rem;
     font-size: 3rem;
     font-weight: 100;
-    /* width: 100%; */
     border-bottom: var(--color-principal-claro) 1px solid;
     overflow: hidden;
     text-overflow: clip;
