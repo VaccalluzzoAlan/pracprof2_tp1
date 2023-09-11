@@ -95,7 +95,7 @@ header:hover{
 .header-logo .isotipo{
     max-width: min(100%,30vw);
     padding-block: 3px;
-    max-height: min(10em,60px);
+    max-height: min(10em,55px);
 }
 
 .header-logo .logotipo{
