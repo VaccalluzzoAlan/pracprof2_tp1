@@ -355,6 +355,7 @@ h2 {
 .preguntas-container {
     margin: 2em 5%;
     min-height: 100px;
+    text-align: justify;
 }
 
 .pregunta {
@@ -364,7 +365,7 @@ h2 {
 
 .pregunta::before {
     content: "P:";
-    margin-right: 1em;
+    margin-right: 0.5em;
 }
 
 .respuesta {
@@ -373,6 +374,7 @@ h2 {
 
 .respuesta::before {
     content: "R:";
+    margin-right: 0.5em;
 }
 
 /* Mapa */
