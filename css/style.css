@@ -139,11 +139,13 @@ nav a{
     padding: 0.5em;
     border-radius: 0.5em;
     display: inline-block;
+    transition: transform 0.5s cubic-bezier(0.0, 0.0, 0.0, 1.0);
 }
 
 nav a:hover{
     background-color: var(--color-detalle-claro);
     color: var(--color-secundario);
+    transform: scale(1.2, 1.2);
 }
 
 nav a:active{
@@ -209,6 +211,15 @@ nav div:not(:last-child)::after{
         flex-grow: 0.2;
         padding: 3px;
         max-width: 4rem;
+        transition: box-shadow 0.5s cubic-bezier(0.0, 0.0, 0.0, 1.0);;
+    }
+
+    #header-menu-trigger:hover {
+        box-shadow: 0px 0px 10px 5px var(--color-secundario);
+    }
+
+    #header-menu-trigger:active {
+        background-color: var(--vermilion);
     }
 
     #header-menu-trigger img {
