@@ -9,12 +9,17 @@
 </head>
 <body>
     <header id="head">
-        <a href="index.html" class="header-logo">
-            <div>
-                <img class="isotipo" src="./img/logo-isotipo.svg" alt="Logo">
-                <img class="logotipo" src="./img/logo-logotipo.svg" alt="Gaston Reparaciones">
-            </div>
-        </a>
+        <div class="header-logo-space">
+            <button type="button" id="header-menu-trigger">
+                <img src="./img/menu.svg" alt="menu">
+            </button>
+            <a href="index.html" class="header-logo">
+                <div>
+                    <img class="isotipo" src="./img/logo-isotipo.svg" alt="Logo">
+                    <img class="logotipo" src="./img/logo-logotipo.svg" alt="Gaston Reparaciones">
+                </div>
+            </a>
+        </div>
         <div class="header-nav-space">
             <nav>
                 <div><a href="#servicios">Servicios</a></div>
@@ -25,10 +30,15 @@
         </div>
     </header>
     <main>
-        <div class="whatsapp">
+        <div class="whatsapp overlay">
             <a href="#">
                 <img src="./img/whatsapp.svg" alt="WhatsApp">
             </a>
+        </div>
+        <div class="bombilla overlay">
+            <button type="button" id="bombilla-boton">
+                <img src="./img/bombilla.svg" alt="Bombilla">
+            </button>
         </div>
         <section id="intro">
             <h1>Gaston Reparaciones</h1>
@@ -142,5 +152,6 @@
             <p>Copyright &copy; 2023 </p>
         </div>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 </html>
