@@ -48,7 +48,7 @@ header{
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: stretch;
-    z-index: 2;
+    z-index: 1;
     box-shadow: 5px 5px 0.75em 0.25em #000000c0;
     opacity: 0.5;
     transition: opacity ease 0.25s;
@@ -334,171 +334,32 @@ h2 {
     width: 100%;
 }
 
-#intro{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 95%;
-    background-color: var(--color-principal-medio);
-    background-image: url(../img/fondo-intro.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 60vh;
-    color: var(--color-principal-claro);
-    margin: 5.6rem auto 0 auto;
-    padding: 0px 0.25em;
-}
+/* Mapa */
 
-#intro::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-principal-medio);
-    opacity: 0.67;
-    z-index: 0;
-}
-
-#intro * {
-    z-index: 1;
-}
-
-#intro h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    max-width: 100%;
-    text-align: center;
-    word-break: break-word;
-}
-
-/* Servicios */
-
-#servicios{
-    min-height: 10em;
-}
-
-#servicios .container {
-    margin: 2em 5%;
-    width: 90%;
-    min-height: 100px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    gap: 2em;
-}
-
-.card {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    background-color: var(--color-secundario);
-    width: min(100%,16em);
-    font-size: 1.25rem;
-    box-shadow: 10px 10px 0.5em 0.5em #000000c0;
-}
-
-.card-img {
-    background-color: var(--color-secundario);
-    max-height: 10em;
-    max-width: 90%;
-}
-
-.card-img img {
-    height: 100%;
-    width: 100%;
-}
-
-.card p {
-    text-align: justify;
-    text-align-last: center;
-    font-size: 0.8em;
-    width: 90%;
-    margin: 0.5em 0;
-}
-
-/* Preguntas frecuentas */
-
-#preguntas {
-    background-color: var(--color-principal-medio);
+#mapa {
     display: block;
     overflow: hidden;
     min-height: 10em;
+    margin: 4rem auto 0 auto;
 }
 
-.preguntas-container {
-    margin: 2em 5%;
-    min-height: 100px;
-    text-align: justify;
-}
-
-.pregunta {
-    font-weight: bold;
-    margin-bottom: 0.5em;
-}
-
-.pregunta::before {
-    content: "P:";
-    margin-right: 0.5em;
-}
-
-.respuesta {
-    margin-bottom: 1em;
-}
-
-.respuesta::before {
-    content: "R:";
-    margin-right: 0.5em;
-}
-
-/* Medios */
-
-#medios {
-    min-height: 10em;
-}
-
-#medios h3 {
-    padding-top: 0.5rem;
-    padding-left: 2rem;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 2rem;
-    font-weight: 100;
+.google-map {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 2em auto;
+    padding: 0 5%;
     overflow: hidden;
-    text-overflow: clip;
+    width: 600px;
+    height: 450px;
+    max-width: 90%;
+    max-height: 90vh;
+    box-sizing: content-box;
 }
 
-.medios-container {
-    margin: 0 5% 2rem 5%;
-    width: 90%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    gap: 2em;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-}
-
-.medios-container:not(:last-child) {
-    margin-bottom: 1rem;
-    border-bottom: 2px solid var(--color-principal-claro);
-    padding-bottom: 2rem;
-}
-
-.medios-container video,
-.medios-container iframe {
-    max-width: 100%;
-    aspect-ratio: 4 / 3;
-}
-
-.medios-container audio {
-    max-width: 100%;
-    flex-grow: 0.8;
+.google-map iframe {
+    height: 100%;
+    width: 100%;
 }
 
 /* Consulta */
@@ -533,18 +394,36 @@ input {
     font-size: 0.7rem;
 }
 
-.form-radio-titulo {
+.form-titulo {
     border-bottom: var(--color-principal-claro) 1px solid;
     margin-bottom: 0.5em;
 }
 
 .form-radio {
     flex-flow: column wrap;
-    padding-bottom: 0.7em;
+    padding-bottom: 0.5em;
 }
 
-.form-radio-opcion {
+.form-opcion {
     margin: 0.3em 0;
+}
+
+.form-titulo {
+    border-bottom: var(--color-principal-claro) 1px solid;
+    margin-bottom: 0.5em;
+}
+
+.form-datalist{
+    flex-flow: column wrap;
+    padding-bottom: 1em;
+}
+
+#horario{
+    margin-top: 0.4em;
+}
+
+.form-dispositivos {
+    margin-bottom: 0.8em;
 }
 
 form textarea {
@@ -580,7 +459,7 @@ form button:active {
     display: inline-block;
     background-color: var(--color-secundario);
     min-height: 100%;
-    max-height: 40em;
+    max-height: 55em;
     flex: 0.5;
 }
 

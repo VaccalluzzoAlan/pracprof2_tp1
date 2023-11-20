@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style_contacto.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>Gastón Reparaciones - Contacto</title>
+</head>
+<body>
+    <header id="head">
+        <div class="header-logo-space">
+            <button type="button" id="header-menu-trigger">
+                <img src="./img/menu.svg" alt="menu">
+            </button>
+            <a href="index.html" class="header-logo">
+                <div>
+                    <img class="isotipo" src="./img/logo-isotipo.svg" alt="Logo">
+                    <img class="logotipo" src="./img/logo-logotipo.svg" alt="Gaston Reparaciones">
+                </div>
+            </a>
+        </div>
+        <div class="header-nav-space">
+            <nav>
+                <div><a href="./index.html" class="outer-link">Página principal</a></div>
+                <div><a href="./pagina2.html" class="outer-link">Página 2</a></div>
+                <div><a href="#mapa">Mapa</a></div>
+                <div><a href="#consulta">Consulta</a></div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="whatsapp overlay">
+            <a href="#">
+                <img src="./img/whatsapp.svg" alt="WhatsApp">
+            </a>
+        </div>
+        <div class="bombilla overlay">
+            <button type="button" id="bombilla-boton">
+                <img src="./img/bombilla.svg" alt="Bombilla">
+            </button>
+        </div>
+        <section id="mapa">
+            <h2>Mapa</h2>
+            <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d65369183.36050187!2d-42.18749801138657!3d0.0000053644276825610756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwMDAnMDAuMCJOIDDCsDAwJzAwLjAiRQ!5e0!3m2!1ses-419!2sar!4v1692483321811!5m2!1ses-419!2sar" width="1200" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <section id="consulta">
+            <div class="consulta-form">
+            <h2>Consulta</h2>
+            <form action="">
+                <div class="form-text">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="Nombre" id="nombre">
+                </div>
+                <div class="form-text">
+                    <label for="nombre">Apellido</label>
+                    <input type="text" name="Apellido" id="apellido">
+                </div>
+                <div class="form-text">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" name="Telefono" id="telefono">
+                </div>
+                <div class="form-text">
+                    <label for="mail">Mail</label>
+                    <input type="mail" name="Mail" id="mail">
+                </div>
+                <p class="form-titulo">Tipo de mensaje</p>
+                <div class="form-radio">
+                    <div class="form-opcion">
+                        <input type="radio" id="tipo-consulta" name="TipoConsulta" value="consulta_general">
+                        <label for="tipo-consulta">Consulta general</label>
+                    </div>
+                    <div class="form-opcion">
+                        <input type="radio" id="presupuesto" name="TipoConsulta" value="presupuesto">
+                        <label for="presupuesto">Presupuesto</label>
+                    </div>
+                    <div class="form-opcion">
+                        <input type="radio" id="membresia" name="TipoConsulta" value="membresia">
+                        <label for="membresia">Membresía</label>
+                    </div>
+                </div>
+                <p class="form-titulo">Horario de respuesta</p>
+                <div class="form-datalist">
+                    <label for="horario">Seleccione un horario que desea que le respondamos:</label>
+                    <input list="hor" name="Horario" id="horario">
+                    <datalist id="hor">
+                        <option value="De 8hs a 12hs">
+                        <option value="De 13hs a 16hs">
+                        <option value="De 17hs a 20hs">
+                    </datalist>
+                </div>
+                <p class="form-titulo">Dispositivos</p>
+                <div class="form-dispositivos">
+                    <p>¿Qué dispositívos desea que revisemos?</p>
+                    <div class="form-opcion">
+                        <input type="checkbox" name="Notebook" id="notebook">
+                        <label for="notebook">Notebook</label>
+                    </div>
+                    <div class="form-opcion">
+                        <input type="checkbox" name="Pc" id="pc">
+                        <label for="pc">PC de escritorio</label>
+                    </div>
+                    <div class="form-opcion">
+                        <input type="checkbox" name="Celular" id="celular">
+                        <label for="celular">Teléfono celular</label>
+                    </div>
+                    <div class="form-opcion">
+                        <input type="checkbox" name="Otro" id="otro">
+                        <label for="otro">Otro (aclarar en el mensaje cual)</label>
+                    </div>
+                </div>
+                <div class="form-text">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="Mensaje" id="mensaje"></textarea>
+                </div>
+                <button type="submit">ENVIAR</button>
+            </form>
+            </div>
+            <div class="consulta-side">
+                <img src="./img/consulta.png" alt="Consulta">
+            </div>
+        </section>
+    </main>
+</body>
+<footer>
+    <div class="logo-gaston">
+        <a href="index.html">
+            <img src="./img/logo-imagotipo.svg" alt="Logo de Gaston Reparaciones">
+        </a>
+    </div>
+    <div class="contacto">
+        <p>Autores: Gandolfo Baltazar, Vaccalluzzo Alan, Duarte Elizabeth</p>
+        <p>Instituto Nuestra Señora de Luján del Buen Viaje</p>
+        <p>Copyright &copy; 2023 </p>
+    </div>
+</footer>
+<script src="./js/script.js"></script>
+</body>
