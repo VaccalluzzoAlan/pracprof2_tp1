@@ -460,6 +460,47 @@ h2 {
     min-height: 10em;
 }
 
+#medios h3 {
+    padding-top: 0.5rem;
+    padding-left: 2rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 100;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.medios-container {
+    margin: 0 5% 2rem 5%;
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 2em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.medios-container:not(:last-child) {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-principal-claro);
+    padding-bottom: 2rem;
+}
+
+.medios-container video,
+.medios-container iframe {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+.medios-container audio {
+    max-width: 100%;
+    flex-grow: 0.8;
+}
+
 /* Mapa */
 
 #mapa {
