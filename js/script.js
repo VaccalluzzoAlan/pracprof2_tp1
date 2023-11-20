@@ -3,7 +3,7 @@ let menuBoton = document.getElementById("header-menu-trigger");
 let menu = document.querySelector(".header-nav-space");
 let logo = document.querySelector(".header-logo");
 let root = getComputedStyle(document.documentElement);
-let mediaQuery = window.matchMedia("(max-width: calc(240px + 32rem))")
+let mediaQuery = window.matchMedia("(max-width: calc(320px + 36rem))")
 let modoOscuro = true;
 let menuAbierto = false;
 

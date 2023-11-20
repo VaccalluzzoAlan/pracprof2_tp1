@@ -34,7 +34,7 @@ body{
 /* Header */
 
 header{
-    position: sticky;
+    position: fixed;
     left: 0;
     right: 0;
     top: 1rem;
@@ -48,7 +48,7 @@ header{
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: stretch;
-    z-index: 1;
+    z-index: 2;
     box-shadow: 5px 5px 0.75em 0.25em #000000c0;
     opacity: 0.5;
     transition: opacity ease 0.25s;
@@ -134,34 +134,36 @@ nav{
 }
 
 nav a{
-    color: var(--color-detalle-claro);
+    color: var(--mindaro);
     text-decoration: none;
     padding: 0.5em;
     border-radius: 0.5em;
     display: inline-block;
-    transition: transform 0.5s cubic-bezier(0.0, 0.0, 0.0, 1.0);
 }
 
 nav a:hover{
-    background-color: var(--color-detalle-claro);
+    background-color: var(--mindaro);
     color: var(--color-secundario);
-    transform: scale(1.2, 1.2);
 }
 
 nav a:active{
-    background-color: var(--color-detalle-oscuro);
+    background-color: var(--vermilion);
+}
+
+.outer-link{
+    font-weight: bold;
 }
 
 nav div:not(:last-child)::after{
     content: " ";
     width: 1px;
-    background-color: #060029;
-    border-left:#060029 solid 0.5px;
+    background-color: var(--rich-black);
+    border-left:var(--rich-black) solid 0.5px;
     margin: 0 0.5em;
     color: var(--color-principal-medio);
 }
 
-@media (max-width: calc(240px + 32rem)) {
+@media (max-width: calc(320px + 36rem)) {
     header {
         flex-direction: column;
         height: auto;
@@ -211,6 +213,7 @@ nav div:not(:last-child)::after{
         flex-grow: 0.2;
         padding: 3px;
         max-width: 4rem;
+        cursor: pointer;
         transition: box-shadow 0.5s cubic-bezier(0.0, 0.0, 0.0, 1.0);;
     }
 
@@ -251,7 +254,7 @@ nav div:not(:last-child)::after{
         justify-content: space-evenly;
         flex-wrap: wrap;
         align-items: center;
-        flex-direction: row;
+        flex-direction: column;
         font-size: 1em;
         gap: 1em;
         padding: 1em;
@@ -337,28 +340,39 @@ h2 {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 2rem;
-    width: 100%;
+    width: 95%;
     background-color: var(--color-principal-medio);
     background-image: url(../img/fondo-intro.png);
     background-position: center;
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 90vh;
+    min-height: 60vh;
     color: var(--color-principal-claro);
-    margin-bottom: 2rem;
+    margin: 5.6rem auto 0 auto;
+    padding: 0px 0.25em;
+}
+
+#intro::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-principal-medio);
+    opacity: 0.67;
+    z-index: 0;
+}
+
+#intro * {
+    z-index: 1;
 }
 
 #intro h1 {
-    background-color: #4f23ff7f;
-    padding: 0 0.5em;
-    border-radius: 10px;
-    margin-top: 10vh;
     font-size: 3rem;
     font-weight: 700;
     max-width: 100%;
-    text-overflow: clip;
-    overflow: hidden;
+    text-align: center;
+    word-break: break-word;
 }
 
 /* Servicios */
@@ -440,9 +454,16 @@ h2 {
     margin-right: 0.5em;
 }
 
+/* Medios */
+
+#medios {
+    min-height: 10em;
+}
+
 /* Mapa */
 
 #mapa {
+    background-color: var(--color-principal-medio);
     display: block;
     overflow: hidden;
     min-height: 10em;
