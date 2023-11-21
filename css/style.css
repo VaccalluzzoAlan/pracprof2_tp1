@@ -334,6 +334,8 @@ h2 {
     width: 100%;
 }
 
+/* Intro */
+
 #intro{
     display: flex;
     flex-flow: column nowrap;
@@ -368,7 +370,7 @@ h2 {
 }
 
 #intro h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
     max-width: 100%;
     text-align: center;
