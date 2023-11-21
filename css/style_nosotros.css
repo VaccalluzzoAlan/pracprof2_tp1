@@ -519,6 +519,10 @@ li {
     padding-bottom: 0.15rem;
 }
 
+li p {
+    word-break: break-all;
+}
+
 /* Footer */
 
 footer{
