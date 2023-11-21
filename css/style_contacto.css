@@ -163,7 +163,7 @@ nav div:not(:last-child)::after{
     color: var(--color-principal-medio);
 }
 
-@media (max-width: calc(320px + 36rem)) {
+@media (max-width: calc(400px + 40rem)) {
     header {
         flex-direction: column;
         height: auto;
@@ -262,7 +262,7 @@ nav div:not(:last-child)::after{
     }
 
     nav div {
-        width: 6em;
+        width: 7em;
         text-align: center;
     }
 
