@@ -254,7 +254,7 @@ nav div:not(:last-child)::after{
         justify-content: space-evenly;
         flex-wrap: wrap;
         align-items: center;
-        flex-direction: column;
+        flex-direction: row;
         font-size: 1em;
         gap: 1em;
         padding: 1em;
